@@ -1,0 +1,5 @@
+is_global = true
+build_property.RootNamespace = WebApp.Identity
+build_property.ProjectDir = C:\Projeto.WebIdentity\WebApp.Identity\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

@@ -1,0 +1,35 @@
+@model WebApp.Identity.Models.LoginModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-3">
+        <form asp-action="Login">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <h6>Usuário<h6>
+                <input asp-for="UserName" class="form-control" />
+                <span asp-validation-for="UserName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <h6>Senha<h6>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Entrar" class="btn btn-dark mr-4" />
+				<a class="btn btn-dark" asp-controller="Home" asp-action="Register">Cadastrar-se</a>
+            </div>
+        </form>
+        <a asp-controller="Home" asp-action="ForgotPassword" style="color: #343a40;">Esqueceu sua Senha? Clique aqui!</a>
+    </div>
+    
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+
